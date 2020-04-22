@@ -4,9 +4,9 @@
       <transition name="drop">
         <div v-if="showTopNav" class="font-bold text-lg flex-none">
           <a
+            data-scroll
             href="#header"
-            class="relative"
-            @click="scrollTo('header', $event)"
+            class="relative mail-link"
           >
             David Anderson
           </a>
@@ -17,9 +17,9 @@
           <a
             v-for="link in links"
             :key="link.id"
+            data-scroll
             :class="{ current: link.id === currentSection }"
             :href="`#${link.id}`"
-            @click="scrollTo(link.id, $event)"
           >
             {{ link.name }}
           </a>
@@ -43,9 +43,9 @@
         <a
           v-for="link in links"
           :key="link.id"
+          data-scroll
           :class="{ current: link.id === currentSection }"
           :href="`#${link.id}`"
-          @click="scrollTo(link.id, $event)"
         >
           {{ link.name }}
         </a>
@@ -56,6 +56,7 @@
 
 <script>
 import Velocity from 'velocity-animate';
+import SmoothScroll from 'smooth-scroll';
 
 
 export default {
@@ -72,6 +73,7 @@ export default {
         { id: 'cv', name: 'CV' },
       ],
       sections: [],
+      scroll: null,
     };
   },
   computed: {
@@ -83,18 +85,13 @@ export default {
     this.headerHeight = document.getElementById('header').offsetHeight - document.getElementById('nav').offsetHeight - 40;
     this.sections = document.querySelectorAll('section');
 
+    this.scroll = new SmoothScroll('a[href*="#"]', { speed: 500 });
     window.addEventListener('scroll', this.handleScroll, false);
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    scrollTo(id, e) {
-      history.replaceState(undefined, undefined, `#${id}`); // eslint-disable-line
-      e.preventDefault();
-      const el = document.getElementById(id);
-      el.scrollIntoView({ behavior: 'smooth' });
-    },
     handleScroll() {
       if (!this.ticking) {
         requestAnimationFrame(this.update);
