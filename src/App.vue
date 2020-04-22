@@ -125,6 +125,7 @@
             </a>
           </template>
           <template v-slot:description>
+            <p>Skidmore, Owings, and Merrill</p>
             <p>
               A notable new presense on a previously undeveloped plot of land on Manhattan's
               West Side; this project is built atop an existing rail yard, and provides
