@@ -22,7 +22,10 @@
         />
       </template>
     </div>
-    <div class="flex py-6 my-8 border-t border-b border-grey space-x-4">
+    <div
+      class="flex pb-6 mb-8 border-b border-grey space-x-4"
+      :class="images.length > 0 && 'border-t my-8 py-6'"
+    >
       <div class="w-64 flex-none">
         <h4>Project</h4>
         <h3>{{ title }}</h3>

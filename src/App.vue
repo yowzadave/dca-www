@@ -64,27 +64,19 @@
             </p>
           </template>
         </project-entry>
-        <!-- <project-entry title="Concrete">
+        <project-entry title="Concrete">
           <template v-slot:info>
             <a href="https://github.com/obe-de/concrete" target="_blank">Link</a>
           </template>
           <template v-slot:description>
+            <p>*<em>In Progress</em>*</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-              volutpat. Ut wisi enim ad minim veniam, quis nostru exerci. Hmet,
-              consectetuer adipiscing elit, sed diam nonummy. Lorem ipsum dolor sit
-              amet, consectetuer adipiscing.
-            </p>
-
-            <p>
-              Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Wisi enim ad minim veniam, quis nostru exerci. Hmet,
-              consectetuer adipiscing elit, sed diam. Ut wisi enim ad minim veniam,
-              quis nostru exerci. Hmet, consectetuer adipiscing elit, sed diam nonummy.
+              An effort to build an open-source component library consisting of many of the
+              components that are in use internally as part of the <em>Host</em> project. On the
+              roadmap for inclusion: paging input panels, toolbars, 2D/3D viewports, etc.
             </p>
           </template>
-        </project-entry> -->
+        </project-entry>
       </section>
       <section id="architecture">
         <h2>Architecture</h2>
