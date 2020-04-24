@@ -3,7 +3,7 @@
     <top-nav>
       A product designer and engineer, with a background in architecture. Multidisciplinary
       by disposition and training, I'm currently the project lead for several key initiatives
-      by the team at <a href="https://www.crh.io" target="_blank">CRH Technology Studio</a>.
+      by the team at <a href="https://www.crh.io" target="_blank">CRH&nbsp;Technology&nbsp;Studio</a>.
     </top-nav>
     <div class="pt-8 z-0">
       <section id="software" ref="software">
@@ -213,8 +213,20 @@ section {
   padding-top: 6rem;
 }
 
+h1 {
+  @apply text-4xl font-bold mt-16;
+
+  @media (min-width: 640px) {
+    @apply text-6xl;
+  }
+}
+
 h2 {
-  @apply text-5xl font-bold border-b border-grey-light inline-block w-auto mb-4 mt-4;
+  @apply text-3xl font-bold border-b border-grey-light inline-block w-auto mb-4 mt-4;
+
+  @media (min-width: 640px) {
+    @apply text-5xl;
+  }
 }
 
 h4 {

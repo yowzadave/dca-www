@@ -1,8 +1,9 @@
 <template>
-  <div id="header" class="bg-black text-cream">
+  <div id="header" class="bg-black text-cream w-full">
     <div id="nav" class="bg-black px-8 w-full flex items-center justify-between h-16 z-10">
+      <!-- Full size nav elements -->
       <transition name="drop">
-        <div v-if="showTopNav" class="font-bold text-lg flex-none">
+        <div v-if="showTopNav" class="hidden sm:block font-bold text-lg flex-none">
           <a
             data-scroll
             href="#header"
@@ -25,6 +26,45 @@
           </a>
         </div>
       </transition>
+
+      <!-- Hamburger menu for small screen sizes -->
+      <transition name="drop">
+        <div v-if="showTopNav" class="sm:hidden">
+          <svg
+            class="block h-6 w-6"
+            stroke="currentColor"
+            fill="none"
+            viewBox="0 0 24 24"
+            @click="showMenu = !showMenu"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <div
+            v-if="showMenu"
+            class="mobile-menu"
+          >
+            <div
+              v-for="link in links"
+              :key="link.id"
+            >
+              <a
+                :key="link.id"
+                data-scroll
+                :class="{ current: link.id === currentSection }"
+                :href="`#${link.id}`"
+                @click="showMenu = false"
+              >
+                {{ link.name }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </transition>
+
       <div v-if="!showTopNav" />
       <div class="flex-none">
         <a href="mailto:david@davidcanderson.net" class="mail-link">
@@ -74,6 +114,7 @@ export default {
       ],
       sections: [],
       scroll: null,
+      showMenu: false,
     };
   },
   computed: {
@@ -146,13 +187,38 @@ export default {
   right: 0;
 }
 
-h1 {
-  @apply text-6xl font-bold mt-16;
+.mobile-menu {
+  @apply bg-black;
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  a {
+    @apply inline-block w-auto border-b-8 text-grey-dark;
+    border-color: transparent;
+    transition: color .3s, border-color .3s;
+
+    &:hover, &.current {
+      @apply text-cream border-coral;
+      transition: color .3s, border-color .3s;
+    }
+  }
 }
 
 .description {
+  @apply text-sm;
   margin: auto;
-  width: 36rem;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: 640px) {
+    @apply text-base;
+    width: 36rem;
+    padding: 0;
+  }
 
   a:link:hover {
     text-decoration: underline;
@@ -160,8 +226,13 @@ h1 {
 }
 
 .nav-links {
-  @apply m-auto mt-8 font-bold text-lg flex justify-around;
-  width: 30rem;
+  @apply m-auto mt-8 font-bold text-base flex justify-around;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    @apply text-lg;
+    width: 30rem;
+  }
 
   a {
     display: block;
@@ -177,8 +248,12 @@ h1 {
 }
 
 .top-nav-links {
-  @apply m-auto font-bold text-lg flex justify-around;
+  @apply m-auto font-bold text-lg hidden;
   width: 30rem;
+
+  @media (min-width: 640px) {
+    @apply flex justify-around;
+  }
 
   a {
     @apply pt-2;
