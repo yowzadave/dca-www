@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <top-nav>
-      A product designer and engineer, with a background in architecture. Multidisciplinary
+      A product designer and software engineer, with a background in architecture. Multidisciplinary
       by disposition and training, I'm currently the project lead for several key initiatives
       by the team at <a href="https://www.crh.io" target="_blank">CRH&nbsp;Technology&nbsp;Studio</a>.
     </top-nav>
@@ -64,16 +64,18 @@
             </p>
           </template>
         </project-entry>
-        <project-entry title="Concrete">
+        <project-entry
+          title="Concrete"
+          :images="[{ src: '/images/concrete.png' }]"
+        >
           <template v-slot:info>
-            <a href="https://github.com/obe-de/concrete" target="_blank">Link</a>
+            <a href="https://concrete.crh.io" target="_blank">Link</a>
           </template>
           <template v-slot:description>
-            <p>*<em>In Progress</em>*</p>
             <p>
               An effort to build an open-source component library consisting of many of the
-              components that are in use internally as part of the <em>Host</em> project. On the
-              roadmap for inclusion: paging input panels, toolbars, 2D/3D viewports, etc.
+              components that are in use internally as part of the <em>Host</em> project. I am
+              the primary designer/developer and maintainer for this project.
             </p>
           </template>
         </project-entry>
