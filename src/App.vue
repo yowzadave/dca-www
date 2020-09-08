@@ -137,7 +137,7 @@
         <h2>CV</h2>
         <cv-entry title="Github">https://github.com/yowzadave</cv-entry>
         <cv-entry title="Experience">
-          <h4>Senior Architect, CRH Technology Studio</h4>
+          <h4>Lead Product Architect, CRH Technology Studio</h4>
           <p>New York, New York — October 2015 - Present</p>
           <p>
             CRH offers a very broad range of building products, from building enclosure
