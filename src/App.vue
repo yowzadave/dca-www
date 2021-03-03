@@ -37,6 +37,7 @@
         </project-entry>
         <project-entry
           title="Host"
+          :images="[{ src: '/images/host.mp4' }]"
         >
           <template v-slot:description>
             <p>
