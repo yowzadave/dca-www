@@ -9,6 +9,34 @@
       <section id="software" ref="software">
         <h2>Software</h2>
         <project-entry
+          title="JSDraft"
+          :images="[{ src: '/images/jsdraft-demo.mp4' }]"
+        >
+          <template v-slot:info>
+            <a href="https://github.com/leviat-tech/jsdraft" target="_blank">Link</a>
+          </template>
+          <template v-slot:description>
+            <p>
+              JSDraft is a functional toolkit for drawing and flexing 2D parametric drawings.
+            </p>
+
+            <p>
+              It includes:
+                <ul>
+                  <li>A javascript library (@crhio/jsdraft) for manipulating 2D parametric drawings</li>
+                  <li>A simple editor app to assist in creating new drawings</li>
+                  <li>A webkit loader (@crhio/webpack-jsdraft-loader) for importing drawings into webkit projects</li>
+                  <li>A rollup/vite plugin (@crhio/rollup-plugin-jsdraft) for importing drawings into rollup/vite projects</li>
+                </ul>
+            </p>
+
+            <p>
+              This toolkit is currently used in production to automate drawing generation for manufacturing; I was
+              the primary designer, and developer for this project.
+            </p>
+          </template>
+        </project-entry>
+        <project-entry
           title="Showroom"
           :images="[{ src: '/images/showroom.mp4' }]"
         >
