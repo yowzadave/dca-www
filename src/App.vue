@@ -32,7 +32,7 @@
 
             <p>
               This toolkit is currently used in production to automate drawing generation for manufacturing; I was
-              the primary designer, and developer for this project.
+              the primary designer and developer for this project.
             </p>
           </template>
         </project-entry>
