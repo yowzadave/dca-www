@@ -20,17 +20,17 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .content {
   width: 100%;
 
   @media (min-width: 1024px) {
     width: 52rem;
   }
+}
 
-  &:last-of-type {
-    @apply border-b border-grey-light pb-4 mb-8;
-  }
+.content:last-of-type {
+   @apply border-b border-grey-light pb-4 mb-8;
 }
 
 a, a:link {

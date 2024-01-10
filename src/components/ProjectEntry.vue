@@ -7,17 +7,17 @@
       <template v-for="(image, index) in images">
         <div
           v-if="isVideo(image.src)"
-          :key="index"
-          class="bg-grey-light w-full h-full"
+          :key="`${image.src}-${index}`"
+          class="w-full h-full"
         >
-          <video loop autoplay muted class="object-cover h-full w-full">
+          <video loop autoplay muted class="object-contain h-full w-full">
             <source :src="image.src" type="video/mp4">
           </video>
         </div>
         <div
           v-else
-          :key="index"
-          class="bg-grey-light w-full h-full bg-cover bg-no-repeat bg-center"
+          :key="`${image.src}-${index}`"
+          class="w-full h-full bg-cover bg-no-repeat bg-center"
           :style="{ 'background-image': `url('${image.src}')` }"
         >
           &nbsp;
@@ -25,7 +25,7 @@
       </template>
     </div>
     <div
-      class="flex flex-col sm:flex-row px-4 lg:px-0 pb-6 mb-8 border-b border-grey sm:space-x-4"
+      class="flex flex-col sm:flex-row px-4 lg:px-0 pb-6 mb-8 border-b border-gray-300 sm:space-x-4"
       :class="images.length > 0 && 'border-t my-8 py-6'"
     >
       <div class="mb-4 sm:w-64 flex-none">
@@ -58,7 +58,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .content {
   width: 100%;
 

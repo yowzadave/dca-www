@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply text-black bg-cream;
+}
+
+section {
+  margin-top: -6rem;
+  padding-top: 6rem;
+}
+
+h1 {
+  @apply text-4xl font-bold mt-16;
+}
+
+h2 {
+  @apply text-3xl font-bold border-b border-grey-light inline-block w-auto mb-4 mt-4;
+
+}
+
+@media (min-width: 640px) {
+  h1 {
+    @apply text-6xl;
+  }
+
+  h2 {
+    @apply text-5xl;
+  }
+}
+
+
+h4 {
+  @apply text-sm font-bold;
+}
+
+h3 {
+  @apply text-2xl font-light mb-2;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+#app {
+  font-family: 'Montserrat', Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  text-align: center;
+}

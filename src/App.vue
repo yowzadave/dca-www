@@ -2,18 +2,44 @@
   <div id="app">
     <top-nav>
       A product designer and software engineer, with a background in architecture. Multidisciplinary
-      by disposition and training, I'm currently the project lead for several key initiatives
-      by the team at <a href="https://www.crh.io" target="_blank">CRH&nbsp;Technology&nbsp;Studio</a>.
+      by disposition and training, I'm currently the the Head of Design and Engineering at
+      <a href="https://shape.exchange/" target="_blank">Shape Exchange</a>, an NYC-based startup
+      building software for the construction industry.
     </top-nav>
     <div class="pt-8 z-0">
       <section id="software" ref="software">
         <h2>Software</h2>
         <project-entry
-          title="JSDraft"
-          :images="[{ src: '/images/jsdraft-demo.mp4' }]"
+          title="Shape Exchange"
+          :images="[{ src: '/images/shape-exchange.mp4' }]"
         >
           <template v-slot:info>
-            <a href="https://github.com/leviat-tech/jsdraft" target="_blank">Link</a>
+            <a href="https://shape.exchange" target="_blank">Link</a>
+          </template>
+          <template v-slot:description>
+            <p>
+              Shape Exchange is a platform for collaboration between glass fabricators and installers that
+              allows them to visualize their work graphically, to catch potential errors before they
+              happen, and to quickly generate quotes and orders in a standardized format. I am the lead
+              designer and developer for this project.
+            </p>
+
+            <p>
+              It is a responsive, real-time-collaborative web application that includes a 2D graphical editing environment,
+              a table-based quick-edit interface, and a documentation viewer that allows users to quickly
+              review drawings and photos, and to generate quotes and orders from those documents. It is built
+              on a Svelte front-end and a Node back-end, with various supporting services. It is designed to work effectively
+              on both desktop and mobile devices (for use on construction sites).
+            </p>
+          </template>
+        </project-entry>
+
+        <project-entry
+          title="JSDraft"
+          :images="[{ src: '/images/jsdraft-demo-sm.mp4' }]"
+        >
+          <template v-slot:info>
+            <a href="https://github.com/yowzadave/jsdraft" target="_blank">Link</a>
           </template>
           <template v-slot:description>
             <p>
@@ -22,7 +48,7 @@
 
             <p>
               It includes:
-                <ul>
+                <ul class="list-disc px-8">
                   <li>A javascript library (@crhio/jsdraft) for manipulating 2D parametric drawings</li>
                   <li>A simple editor app to assist in creating new drawings</li>
                   <li>A webkit loader (@crhio/webpack-jsdraft-loader) for importing drawings into webkit projects</li>
@@ -220,9 +246,9 @@
 </template>
 
 <script>
-import TopNav from '@/components/TopNav';
-import ProjectEntry from '@/components/ProjectEntry';
-import CvEntry from '@/components/CvEntry';
+import TopNav from './components/TopNav.vue';
+import ProjectEntry from './components/ProjectEntry.vue';
+import CvEntry from './components/CvEntry.vue';
 
 
 export default {
@@ -231,52 +257,3 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import 'assets/styles/tailwind.postcss';
-
-html {
-  @apply text-black bg-cream;
-}
-
-section {
-  margin-top: -6rem;
-  padding-top: 6rem;
-}
-
-h1 {
-  @apply text-4xl font-bold mt-16;
-
-  @media (min-width: 640px) {
-    @apply text-6xl;
-  }
-}
-
-h2 {
-  @apply text-3xl font-bold border-b border-grey-light inline-block w-auto mb-4 mt-4;
-
-  @media (min-width: 640px) {
-    @apply text-5xl;
-  }
-}
-
-h4 {
-  @apply text-sm font-bold;
-}
-
-h3 {
-  @apply text-2xl font-light mb-2;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-#app {
-  font-family: 'Montserrat', Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 500;
-  text-align: center;
-}
-
-</style>

@@ -179,7 +179,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 #nav {
   position: fixed;
   top: 0;
@@ -195,16 +195,18 @@ export default {
   right: 0;
   z-index: 10;
 
-  a {
-    @apply inline-block w-auto border-b-8 text-grey-dark;
-    border-color: transparent;
-    transition: color .3s, border-color .3s;
+}
 
-    &:hover, &.current {
-      @apply text-cream border-coral;
-      transition: color .3s, border-color .3s;
-    }
-  }
+a.mobile-menu {
+  @apply inline-block w-auto border-b-8 text-grey-dark;
+  border-color: transparent;
+  transition: color .3s, border-color .3s;
+
+}
+
+mobile-menu a:hover, mobile-menu a.current {
+  @apply text-cream border-coral;
+  transition: color .3s, border-color .3s;
 }
 
 .description {
@@ -215,14 +217,14 @@ export default {
   padding-right: 1rem;
 
   @media (min-width: 640px) {
-    @apply text-base;
+    font-size: 1rem;
     width: 36rem;
     padding: 0;
   }
+}
 
-  a:link:hover {
-    text-decoration: underline;
-  }
+.description a:link:hover {
+  text-decoration: underline;
 }
 
 .nav-links {
@@ -230,43 +232,49 @@ export default {
   width: 100%;
 
   @media (min-width: 640px) {
-    @apply text-lg;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
     width: 30rem;
   }
+}
 
-  a {
-    display: block;
-    @apply border-b-8 text-grey-dark;
-    border-color: transparent;
-    transition: color .3s, border-color .3s;
+.nav-links a {
+  display: block;
+  @apply border-b-8 text-grey-dark;
+  border-color: transparent;
+  transition: color .3s, border-color .3s;
 
-    &:hover, &.current {
-      @apply text-cream border-coral;
-      transition: color .3s, border-color .3s;
-    }
-  }
+}
+
+.nav-links a:hover, .nav-links a.current {
+  @apply text-cream border-coral;
+  transition: color .3s, border-color .3s;
 }
 
 .top-nav-links {
   @apply m-auto font-bold text-lg hidden;
   width: 30rem;
 
-  @media (min-width: 640px) {
+}
+
+@media (min-width: 640px) {
+  .top-nav-links {
     @apply flex justify-around;
   }
+}
 
-  a {
-    @apply pt-2;
-    display: block;
-    @apply border-b-8 text-grey-dark;
-    border-color: transparent;
-    transition: color .3s, border-color .3s;
 
-    &:hover, &.current {
-      @apply text-cream border-coral;
-      transition: color .3s, border-color .3s;
-    }
-  }
+.top-nav-links a {
+  @apply pt-2;
+  display: block;
+  @apply border-b-8 text-grey-dark;
+  border-color: transparent;
+  transition: color .3s, border-color .3s;
+}
+
+.top-nav-links a:hover, .top-nav-links a.current {
+  @apply text-cream border-coral;
+  transition: color .3s, border-color .3s;
 }
 
 .mail-link {
@@ -276,10 +284,11 @@ export default {
   border-color: transparent;
   transition: border-color .3s;
 
-  &:hover {
-    @apply border-coral;
-    transition: border-color .3s;
-  }
+}
+
+.mail-link a:hover {
+  @apply border-coral;
+  transition: border-color .3s;
 }
 
 .drop-enter-active, .drop-leave-active {
