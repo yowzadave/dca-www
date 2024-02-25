@@ -192,8 +192,17 @@
         <h2>CV</h2>
         <cv-entry title="Github">https://github.com/yowzadave</cv-entry>
         <cv-entry title="Experience">
+          <h4>Head of Design and Engineering, Diagraphics, Inc.</h4>
+          <p>New York, New York — January 2022 - Present</p>
+          <p>
+            A startup building software for the construction industry. I am a co-founder,
+            lead developer, and product designer for Shape Exchange, a platform for
+            collaboration between glass fabricators. The software allows users to visualize
+            their work graphically, to catch potential errors before they happen, and to
+            quickly generate quotes and orders in a standardized format.
+          </p>
           <h4>Lead Product Architect, CRH Technology Studio</h4>
-          <p>New York, New York — October 2015 - Present</p>
+          <p>New York, New York — October 2015 - January 2022</p>
           <p>
             CRH offers a very broad range of building products, from building enclosure
             systems to hardware to raw materials. I’m currently the lead product designer,
