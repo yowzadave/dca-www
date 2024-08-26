@@ -205,16 +205,16 @@
           <p>New York, New York — October 2015 - January 2022</p>
           <p>
             CRH offers a very broad range of building products, from building enclosure
-            systems to hardware to raw materials. I’m currently the lead product designer,
+            systems to hardware to raw materials. I’m was the lead product designer,
             software engineer, and project manager for a set of digital tools that serve
-            estimators, engineers, and customers. Previously I have been involved in new
+            estimators, engineers, and customers. Previously I was involved in new
             physical product development, product strategy, and product/market research.
           </p>
           <h4>Senior Architectural Licensed Professional, SOM</h4>
           <p>New York, New York — October 2011 - 2015</p>
           <p>
             As part of Gary Haney’s design studio, I was involved in the design of a number
-            of high-profile projects. I was the team leader of the Four Seasons Jeddah from
+            of high-profile projects: I was the team leader of the Four Seasons Jeddah from
             Concept Design through Design Development, managing a team of 5 designers.
             I was also an integral team member of the Shenzhen Shum Yip project from the
             initial masterplan competition entry to the development of two high-rise mixed-use
