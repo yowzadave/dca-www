@@ -205,7 +205,7 @@
           <p>New York, New York — October 2015 - January 2022</p>
           <p>
             CRH offers a very broad range of building products, from building enclosure
-            systems to hardware to raw materials. I’m was the lead product designer,
+            systems to hardware to raw materials. I was the lead product designer,
             software engineer, and project manager for a set of digital tools that serve
             estimators, engineers, and customers. Previously I was involved in new
             physical product development, product strategy, and product/market research.
